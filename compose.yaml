@@ -1,0 +1,12 @@
+services:
+
+  db-service:
+    image: postgres:13.8-alpine
+    container_name: "reactive-db"
+    restart: always
+    environment:
+      - POSTGRES_DB=reactive-db
+      - POSTGRES_USER=fakeuser
+      - POSTGRES_PASSWORD=fakepassword
+    ports:
+      - 5432:5432
